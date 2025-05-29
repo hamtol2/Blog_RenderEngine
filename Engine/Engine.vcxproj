@@ -127,7 +127,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);BUILD_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <GenerateSourceDependencies>false</GenerateSourceDependencies>
     </ClCompile>
@@ -137,8 +137,8 @@
       <AdditionalDependencies>d3d11.lib;winmm.lib;d3dcompiler.lib;dxgi.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(OutDir)\Engine.lib ..\Library\$(Platform)\$(Configuration)\ /e /y
-xcopy $(OutDir)\Engine.dll ..\Library\$(Platform)\$(Configuration)\ /e /y</Command>
+      <Command>xcopy $(OutDir)\Engine.lib ..\Library\Engine\$(Platform)\$(Configuration)\ /e /y
+xcopy $(OutDir)\Engine.dll ..\Library\Engine\$(Platform)\$(Configuration)\ /e /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,7 +147,7 @@ xcopy $(OutDir)\Engine.dll ..\Library\$(Platform)\$(Configuration)\ /e /y</Comma
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);BUILD_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <GenerateSourceDependencies>false</GenerateSourceDependencies>
     </ClCompile>
@@ -159,8 +159,8 @@ xcopy $(OutDir)\Engine.dll ..\Library\$(Platform)\$(Configuration)\ /e /y</Comma
       <AdditionalDependencies>d3d11.lib;winmm.lib;d3dcompiler.lib;dxgi.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(OutDir)\Engine.lib ..\Library\$(Platform)\$(Configuration)\ /e /y
-xcopy $(OutDir)\Engine.dll ..\Library\$(Platform)\$(Configuration)\ /e /y</Command>
+      <Command>xcopy $(OutDir)\Engine.lib ..\Library\Engine\$(Platform)\$(Configuration)\ /e /y
+xcopy $(OutDir)\Engine.dll ..\Library\Engine\$(Platform)\$(Configuration)\ /e /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

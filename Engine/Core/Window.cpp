@@ -63,7 +63,7 @@ Window::Window(
         // 창 생성에 실패하면 이 코드에서 중단점이 실행되도록 중지 처리.
         __debugbreak();
     }
-
+    
     // 창 보여주기.
     ShowWindow(handle, SW_SHOW);
 
