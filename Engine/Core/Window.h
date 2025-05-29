@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include <string>
 
-class Window
+class ENGINE_API Window
 {
 public:
 	Window(
